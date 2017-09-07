@@ -33,12 +33,21 @@
         cnt: 3
     }).done(function(data) {
         console.log(data);
-         $("#temperature").append(data.main.temp_max + "&deg;F" + " / "+ data.main.temp_min + "&deg;F");
-         $("#icon").append("<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'>");
-         $("#forecast").append("<strong>" + data.weather[0].main + ": </strong>" + data.weather[0].description);
-         $("#humidity").append("<strong>Humidity: </strong>" + data.main.humidity);
-         $("#wind").append("<strong>Wind: </strong>" + data.wind.speed);
-         $("#pressure").append("<strong>Pressure: </strong>" + data.main.pressure);
+
+        for (var i = 0; i < data.list.length; i++) {
+
+            $(".temperature").parent("#widget" + i).append(data.list[i].main.temp_max + "&deg;F" + " / " + data.list[i].main.temp_min + "&deg;F");
+
+            $(".icon").parent("#widget" + i).append("<img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'>");
+
+            $(".forecast").parent("#widget" + i).append("<strong>" + data.list[i].weather[0].main + ": </strong>" + data.list[i].weather[0].description);
+
+            $(".humidity").parent("#widget" + i).append("<strong>Humidity: </strong>" + data.list[i].main.humidity);
+
+            $(".wind").parent("#widget" + i).append("<strong>Wind: </strong>" + data.list[i].wind.speed);
+
+            $(".pressure").parent("#widget" + i).append("<strong>Pressure: </strong>" + data.list[i].main.pressure);
+        }
     });
 
 
