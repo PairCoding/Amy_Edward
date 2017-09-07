@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/weather_map.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/weather_map.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Ubuntu" rel="stylesheet">
     <title>Weather Map</title>
 </head>
 <body>
 
-<form>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Three Day Weather Forecast</h1>
+        <h2 id="city"></h2>
+    </div>
+</div>
+
+
+<form class="form">
     <input id = "lat" type="text" placeholder="Enter latitude">
     <input id = "lon" type="text" placeholder="Enter longitude">
     <button id = "button" type="submit">Submit</button>

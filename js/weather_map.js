@@ -24,13 +24,14 @@
 
             console.log(data);
 
+            $("#city").html(data.city.name);
 
+            $(".row").empty();
 
 
             for (var i = 0; i < data.list.length; i++) {
 
-
-                var html = "<div class='col-xs-4'>";
+                var html = "<div class='column col-xs-4 text-center'>";
                 html +=
 
                     "<p class='widget'>" + data.list[i].main.temp_max + "&deg;F" + " / " + data.list[i].main.temp_min + "&deg;F" + "</p>" +

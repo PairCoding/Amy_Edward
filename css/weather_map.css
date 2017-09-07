@@ -1,8 +1,36 @@
+body, html {
+    background-color: #ABDCFD;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.jumbotron {
+    background-image: url("img/weather.jpg");
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.form {
+    text-align:center;
+    padding: 10px;
+}
+
+.form input {
+    text-align: center;
+}
+
 .widget {
     widget:33%;
-    padding:5px;
+    padding:10px;
+}
+
+.column {
+    border: 1px solid black;
 }
 
 .row {
+    background-color: #DDE1C7;
     border: 1px solid black;
 }
