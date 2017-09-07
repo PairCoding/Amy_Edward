@@ -8,16 +8,18 @@
         lon: -98.489545,
         units: "imperial"
     }).done(function(data) {
-        console.log(data.main.temp_max);
+        console.log(data);
 
     //data.forEach(function(weather){
-        var farenheit = "&#8457"
-        $("#widget").append(data.main.temp_max + "&deg;F" + " / "+ data.main.temp_min + "&deg;F")
+        $("#temperature").append(data.main.temp_max + "&deg;F" + " / "+ data.main.temp_min + "&deg;F");
+        $("#icon").append("<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'>");
+        $("#forecast").append("<strong>" + data.weather[0].main + ": </strong>" + data.weather[0].description);
+        $("#humidity").append("<strong>Humidity: </strong>" + data.main.humidity);
+        $("#wind").append("<strong>Wind: </strong>" + data.wind.speed);
+        $("#pressure").append("<strong>Pressure: </strong>" + data.main.pressure);
 
-           // console.log(weather);
 
-       // }
-    //)
+        // })
 
 
 
