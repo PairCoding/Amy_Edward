@@ -4,7 +4,9 @@ body, html {
 }
 
 .jumbotron {
-    background-image: url("img/weather.jpg");
+    background-image: url("http://az616578.vo.msecnd.net/files/2016/03/01/6359240176401243761819227205_81-explore-the-area-climate-and-weather.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1, h2 {

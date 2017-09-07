@@ -34,7 +34,7 @@
                 var html = "<div class='column col-xs-4 text-center'>";
                 html +=
 
-                    "<p class='widget'>" + data.list[i].main.temp_max + "&deg;F" + " / " + data.list[i].main.temp_min + "&deg;F" + "</p>" +
+                    "<p class='widget'>" + data.list[i].main.temp_max.toFixed(0) + "&deg;F" + " / " + data.list[i].main.temp_min.toFixed(0) + "&deg;F" + "</p>" +
 
                     "<p class='widget'>" + "<img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'>" +
 
