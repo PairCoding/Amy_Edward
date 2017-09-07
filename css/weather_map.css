@@ -1,4 +1,8 @@
-#widget {
-    width:770px;
-    height:481px;
+.widget {
+    widget:33%;
+    padding:5px;
+}
+
+.row {
+    border: 1px solid black;
 }
