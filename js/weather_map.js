@@ -8,9 +8,18 @@
         lon: -98.489545,
         units: "imperial"
     }).done(function(data) {
-        console.log(data);
+        console.log(data.main.temp_max);
 
-    // data.
+    //data.forEach(function(weather){
+        var farenheit = "&#8457"
+        $("#widget").append(data.main.temp_max + "&deg;F" + " / "+ data.main.temp_min + "&deg;F")
+
+           // console.log(weather);
+
+       // }
+    //)
+
+
 
 
 
