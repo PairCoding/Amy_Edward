@@ -4,14 +4,19 @@ body, html {
 }
 
 .jumbotron {
-    background-image: url("http://az616578.vo.msecnd.net/files/2016/03/01/6359240176401243761819227205_81-explore-the-area-climate-and-weather.jpg");
+    background-image: url("http://az616578.vo.msecnd.net/files/2016/03/01/6359240176401243761819227205_81-explore-the-area-climate-and-weather.jpg");*/
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-h1, h2 {
+h1, h2  {
     text-align: center;
     font-family: 'Permanent Marker', cursive;
+}
+
+h3 {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
 }
 
 .form {
@@ -35,9 +40,14 @@ h1, h2 {
 .row {
     background-color: #DDE1C7;
     border: 1px solid black;
+    width: 90%;
+    margin: 10px auto;
+
+
 }
 
 #map-canvas {
-    width: 100%;
+    width: 90%;
     height: 481px;
+    margin: 10px auto;
 }
