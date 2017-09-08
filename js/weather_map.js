@@ -54,8 +54,37 @@
         });
     }
 
-     //Daily forecast info
+     //Map info
+    var mapOptions = {
+        // Set the zoom level
+        zoom: 19,
 
+        // This sets the center of the map at our location
+        center: {
+            lat:  29.423017,
+            lng: -98.48527
+        }
+    };
 
+    // Render the map
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+    var marker;
+
+        marker = new google.maps.Marker({
+            map: map,
+            draggable: true,
+            animation: google.maps.Animation.DROP,
+            position: {lat: 29.423017, lng: -98.48527}
+        });
+        marker.addListener('click', toggleBounce);
+
+    function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
 
 })();

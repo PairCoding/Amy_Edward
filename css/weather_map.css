@@ -36,3 +36,8 @@ h1, h2 {
     background-color: #DDE1C7;
     border: 1px solid black;
 }
+
+#map-canvas {
+    width: 100%;
+    height: 481px;
+}

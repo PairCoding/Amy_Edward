@@ -9,25 +9,34 @@
 </head>
 <body>
 
-<div class="jumbotron">
-    <div class="container">
-        <h1>Three Day Weather Forecast</h1>
-        <h2 id="city"></h2>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Three Day Weather Forecast</h1>
+            <h2 id="city"></h2>
+        </div>
     </div>
-</div>
 
 
-<form class="form">
-    <input id = "lat" type="text" placeholder="Enter latitude">
-    <input id = "lon" type="text" placeholder="Enter longitude">
-    <button id = "button" type="submit">Submit</button>
-</form>
+    <form class="form">
+        <input id = "lat" type="text" placeholder="Enter latitude">
+        <input id = "lon" type="text" placeholder="Enter longitude">
+        <button id = "button" type="submit">Submit</button>
+    </form>
 
-<div class="row"></div>
+    <div class="row"></div>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="js/weather_map.js"></script>
+    <div id="map-canvas"></div>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfePhFpKoCZ12-mkcXPPI138dc38gZzbU"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="js/weather_map.js"></script>
+
+
+
 
 </body>
 </html>
