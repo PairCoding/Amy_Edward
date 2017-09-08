@@ -4,13 +4,13 @@
 
     getWeather(29.423017, -98.48527);
 
-    $("#button").click(function(event){
-        event.preventDefault();
-        var lat = $("#lat").val();
-        var lon = $("#lon").val();
-
-        getWeather(lat, lon);
-    });
+    // $("#button").click(function(event){
+    //     event.preventDefault();
+    //     var lat = $("#lat").val();
+    //     var lon = $("#lon").val();
+    //
+    //     getWeather(lat, lon);
+    // });
 
 
     function getWeather(lat, lon) {
@@ -24,7 +24,7 @@
 
             console.log(data);
 
-            $("#city").html(data.city.name);
+            $("#location").html(data.city.name + ", " + data.city.country);
 
             $(".row").empty();
 
@@ -77,14 +77,14 @@
             animation: google.maps.Animation.DROP,
             position: {lat: 29.423017, lng: -98.48527}
         });
-        marker.addListener('click', toggleBounce);
 
-    function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-            marker.setAnimation(null);
-        } else {
-            marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
-    }
+        // marker.addListener('click');
+
+        marker.addListener("dragend", function(){
+            var pinLat = marker.getPosition().lat();
+            var pinLon = marker.getPosition().lng();
+            getWeather(pinLat, pinLon);
+        });
+
 
 })();
